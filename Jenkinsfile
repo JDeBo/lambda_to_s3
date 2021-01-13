@@ -4,6 +4,10 @@ node {
     //     cleanWs()
     //     git 'https://github.com/JDeBo/lamda_to_s3.git'   
     // }
+    stage('List-files') {
+        // List git files
+        sh script: 'ls -lah'
+    }
     stage('Download') {
         // Download Terraform
         sh label: '', script: 'curl https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip \
