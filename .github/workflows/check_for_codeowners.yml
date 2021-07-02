@@ -1,0 +1,10 @@
+name: check-for-codeowners
+on: [push]
+jobs:
+  check-for-codeowners-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # - uses: actions/setup-node@v1
+      - run: ls -al | grep CODEOWNERS
+      # - run: bats -v
